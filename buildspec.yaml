@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - npm install time
+      - npm install weather-js
       - aws cloudformation package --template-file template.yaml --s3-bucket benz-codepipeline-bucket --output-template-file outputSamTemplate.yaml
 artifacts:
   type: zip
