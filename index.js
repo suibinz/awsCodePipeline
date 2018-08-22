@@ -9,7 +9,7 @@ exports.handler = (event, context, callback) => {
 			if (err) console.log(err);
 			currentWeather = result;
 	});
-	console.log(JSON.stringify(currentWeather, null, 2);
+	console.log(JSON.stringify(currentWeather, null, 2));
 
     callback(null, {
         statusCode: 200,
