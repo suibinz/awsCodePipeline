@@ -6,7 +6,7 @@ exports.handler = (event, context, callback) => {
 	var currentWeather = [];
 	var weatherStr;
     currentTime.setTimezone("America/Los_Angeles");
-	weather.find({search: 'San Francisco, CA', degreeType: 'F'}, function(err, result){
+	weather.find({search: 'Redwood City, CA', degreeType: 'F'}, function(err, result){
 		if (err) console.log(err);
     	
 		callback(null, {
