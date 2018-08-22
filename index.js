@@ -8,6 +8,7 @@ exports.handler = (event, context, callback) => {
 	weather.find({search: 'San Francisco, CA', degreeType: 'F'}, function(err, result){
 			if (err) console.log(err);
 			currentWeather = result;
+			console.log(JSON.stringify(result, null, 2));
 	});
 	console.log(JSON.stringify(currentWeather, null, 2));
 
