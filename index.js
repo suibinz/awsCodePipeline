@@ -5,9 +5,9 @@ exports.handler = (event, context, callback) => {
     var currentTime = new time.Date();
 	var currentWeather;
     currentTime.setTimezone("America/Los_Angeles");
-	weaterh.find({search: 'San Francisco, CA', degreeType: 'F'}, function(err, result){
+	weather.find({search: 'San Francisco, CA', degreeType: 'F'}, function(err, result){
 			if (err) console.log(err);
-			currentWeather = result
+			currentWeather = result;
 	});
 
     callback(null, {
