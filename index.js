@@ -11,10 +11,12 @@ exports.handler = (event, context, callback) => {
 			//console.log(JSON.stringify(result, null, 2));
 	});
 			//console.log(JSON.stringify(currentWeather, null, 2));
-			var weatherStr = JSON.stringify(currentWeather[0], null, 2);
-			console.log("Weather String: " + weatherStr)
-    callback(null, {
+	var weatherStr = JSON.stringify(currentWeather[0], null, 2);
+	console.log("Weather String: " + weatherStr);
+	console.log(JSON.stringify(currentWeather, null, 2));
+    
+	callback(null, {
         statusCode: 200,
-        body: 'The time in Redwood City is: ' + currentTime.toString() + "\n" + 'The weather in Redwood City is: ' + weatherStr
+        body: 'The time in Redwood City is: ' + currentTime.toString() + "\n" + 'The weather in Redwood City is: ' + JSON.stringify(currentWeather, null, 2)
     });
 };
