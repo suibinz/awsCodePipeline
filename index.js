@@ -8,11 +8,11 @@ exports.handler = (event, context, callback) => {
 	weather.find({search: 'San Francisco, CA', degreeType: 'F'}, function(err, result){
 			if (err) console.log(err);
 			currentWeather = result;
-			#console.log(JSON.stringify(result, null, 2));
+			//console.log(JSON.stringify(result, null, 2));
 	});
-			#console.log(JSON.stringify(currentWeather, null, 2));
-			weatherStr = JSON.stringify(currentWeather, null, 2);
-
+			//console.log(JSON.stringify(currentWeather, null, 2));
+			var weatherStr = JSON.stringify(currentWeather, null, 2);
+			console.log("Weather String: " + weatherStr)
     callback(null, {
         statusCode: 200,
         body: 'The time in Redwood City is: ' + currentTime.toString() + "\n" + 'The weather in Redwood City is: ' + weatherStr
