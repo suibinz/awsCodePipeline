@@ -13,4 +13,5 @@ exports.handler = (event, context, callback) => {
         	statusCode: 200,
         	body: 'The time in Redwood City is: ' + currentTime.toString() + "\n" + 'The weather in Redwood City is: ' + JSON.stringify(result, null, 2) });
 	});
+	console.log("run compleded")
 };
